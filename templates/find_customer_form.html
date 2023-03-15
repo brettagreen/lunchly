@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Customer search{% endblock %}
+{% block content %}
+<h1>Find a Customer</h1>
+<h2>Search by first name, last name OR by phone number. Otherwise, you won't get results.</h2>
+
+<form action="/search/" method="POST">
+  <div class="form-group">
+    <label for="first-name">First Name: </label>
+    <input id="first-name" class="form-control" name="firstName">
+  </div>
+  <div class="form-group">
+    <label for="last-name">Last Name:</label>
+    <input id="last-name" class="form-control" name="lastName">
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone:</label>
+    <input id="phone" class="form-control" name="phone">
+  </div>
+  <button class="btn btn-primary">Search</button>
+  <a href="/" class="btn btn-danger">Cancel</a>
+</form>
+
+{% endblock %}
