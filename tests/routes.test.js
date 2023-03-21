@@ -5,6 +5,7 @@ const app = require('../app');
 const db = require('../db');
 const striptags = require('striptags');
 const moment = require('moment');
+const { decode } = require('html-entities');
 
 //beforeAll(createTestData);
 
