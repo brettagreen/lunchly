@@ -116,7 +116,7 @@ describe('POST /:id/edit', function() {
          lastName: "Gravesss", middleName: "The Enforcer", notes: "I'm a free man!"});
         const res = await request(app).get(customer.headers.location);
         expect(striptags(res.text)).toEqual(expect.stringContaining('Douglasss The Enforcer Gravesss'));
-        expect(striptags(res.text)).toEqual(expect.stringContaining("I&#39;m a free man!"));
+        expect(striptags(decode(res.text))).toEqual(expect.stringContaining("I'm a free man!"));
     });
 });
 
